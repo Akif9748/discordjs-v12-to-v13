@@ -8,9 +8,8 @@ fs.readdirSync('./commands').forEach(dir => {
         var data = fs.readFileSync(`./commands/${dir}/${file}`, "utf-8");
 
 
-
-        if (!data.includes("const embed") && data.includes("MessageEmbed()")) {
-            console.log("Embedlerin adı embed diye tanımlı değil!   ", dir + "/" + file)
+   if (!data.includes("const embed") &&!data.includes("let embed") &&!data.includes("var embed") && data.includes("MessageEmbed()")) {
+            console.log("Embed Problem!   ", dir + "/" + file)
         }
 
         if (data.includes(".createReactionCollector")) {
