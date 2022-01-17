@@ -7,6 +7,7 @@ const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_
 ```
 
 ONLY CAN CHANGE EMBEDS defined embed, else give warn to console!
+
 message => messageCreate
 
 # Manuel Changes (the app will let you know where it is) :
@@ -21,6 +22,8 @@ const collector = message.createReactionCollector({ filter, time: 15000 });
 const reactions = await message.awaitReactions({ filter, time: 15000 });
 ```
 
+
+#### Embeds are not support number
 ```js
 let count = 5;
 embed.addField('Count', count);
@@ -33,6 +36,7 @@ permissions.has('SEND_MESSAGES')
  permissions.has(Permissions.FLAGS.SEND_MESSAGES) 
 
 ```
+
 ### From:
 - text 
 - news - a guild news channel
@@ -49,6 +53,7 @@ permissions.has('SEND_MESSAGES')
  client.user.setPresence({ activity: { name: 'with discord.js' } });
  client.user.setPresence({ activities: [{ name: 'with discord.js' }] });
 ```
+The User.presence property has been removed. Presences are now only found on GuildMember.
 
 ```js
  Guild.fetchVanityCode().then(code => console.log(`Vanity URL: https://discord.gg/${code}`));
