@@ -8,31 +8,31 @@ fs.readdirSync('./commands').forEach(dir => {
         var data = fs.readFileSync(`./commands/${dir}/${file}`, "utf-8");
 
 
-   if (!data.includes("const embed") &&!data.includes("let embed") &&!data.includes("var embed") && data.includes("MessageEmbed()")) {
+        if (!data.includes("const embed") &&!data.includes("let embed") &&!data.includes("var embed") && data.includes("MessageEmbed()")) {
             console.log("Embed Problem!   ", dir + "/" + file)
         }
 
         if (data.includes(".createReactionCollector")) {
-            console.log("createReactionCollector   ", dir + "/" + file)
+            console.log("(Hata olmayabilir, sadece kolaçan et) createReactionCollector   ", dir + "/" + file)
         }
 
         if (data.includes(".awaitReactions")) {
-            console.log("createReactionCollector   ", dir + "/" + file)
+            console.log("(Hata olmayabilir, sadece kolaçan et) awaitReactions  ", dir + "/" + file)
         }
 
         if (data.includes(".awaitMessages")) {
-            console.log(".awaitMessages   ", dir + "/" + file)
+            console.log("(Hata olmayabilir, sadece kolaçan et) .awaitMessages   ", dir + "/" + file)
         }
 
-
+        //Addfieldste toString gerek ya
         if (data.includes("addField")) {
-            console.log("Embedlerinde AddFields var! (To string yapılacak yerleri olabilir)   ", dir+"/"+file)
+            //   console.log("Embed warn! (To string)   ", dir+"/"+file)
         }
 
 
-        //DAVET LİNKİ OLAN DOSYAYI DA ALIR
+        //Botun davet linki olabilir
         if (data.includes("permissions")) {
-            console.log("Permisson  ", dir + "/" + file)
+            console.log("(Botun davet linki olabilir) Permisson  ", dir + "/" + file)
         }
 
         if (data.includes("unknown")) {
@@ -55,27 +55,29 @@ fs.readdirSync('./commands').forEach(dir => {
             console.log("guild.voice   ", dir + "/" + file)
         }
         if (data.includes(".ban")) {
-            console.log("ban   ", dir + "/" + file)
+            console.log("(Hata olmayabilir, sadece kolaçan et) ban  ", dir + "/" + file)
         }
         if (data.includes(".kick")) {
-            console.log("kick   ", dir + "/" + file)
+            console.log("(Hata olmayabilir, sadece kolaçan et) kick   ", dir + "/" + file)
         }
 
 
 
 
         if (data.includes(".delete")) {
-            console.log(" delete() varsa kolacan et.   ", dir + "/" + file)
+            console.log("(Hata olmayabilir, sadece kolaçan et) delete() .   ", dir + "/" + file)
         }
         if (data.includes("roles.create")) {
             console.log("roles.create   ", dir + "/" + file)
         }
         if (data.includes("WebhookClient")) {
-            console.log("WebhookClient  ", dir + "/" + file)
+            console.log("(Hata olmayabilir, sadece kolaçan et) WebhookClient  ", dir + "/" + file)
         }
-          if (data.includes("Typing")) {
-            console.log("Typing  ", dir + "/" + file)
+        if (data.includes("Typing")) {
+            console.log("(Hata olmayabilir, sadece kolaçan et) Typing  ", dir + "/" + file)
         }
+
+
 
 
 
