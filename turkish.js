@@ -89,8 +89,8 @@ fs.readdirSync('./commands').forEach(dir => {
             .replace(/.ownerID/g, ".ownerId")
             .replace(/.channelID/g, ".channelId")
             .replace(/CUSTOM_STATUS/g, "CUSTOM")
-            .replace(/text/g, `GUILD_TEXT`)
-            .replace(/dm/g, `DM`)
+          //  .replace(/text/g, `GUILD_TEXT`)
+          //  .replace(/dm/g, `DM`)
             .replace(/category/g, `GUILD_CATEGORY`)
             // .replace(/message/g, `messageCreate`)//Bunu kullanmayın
             .replace(/.fetchBans/g, `.bans.fetch`)
