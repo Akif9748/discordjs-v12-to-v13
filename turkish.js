@@ -74,15 +74,15 @@ fs.readdirSync('./commands').forEach(dir => {
         if (data.includes("WebhookClient")) {
             console.log("WebhookClient  ", dir + "/" + file)
         }
-        if (data.includes("stopTyping")) {
-            console.log("stopTyping var dosyada o yürürlükten kalktı ", dir + "/" + file)
+          if (data.includes("Typing")) {
+            console.log("Typing  ", dir + "/" + file)
         }
 
 
 
         const newData = data
-            .replace(/send\(embed\)/g, "send({embeds: [embed]})")
-            .replace(/reply\(embed\)/g, "reply({embeds: [embed]})")
+            .replace(/.send\(embed\)/g, ".send({embeds: [embed]})")
+            .replace(/.reply\(embed\)/g, ".reply({embeds: [embed]})")
 
 
             .replace(/.ownerID/g, ".ownerId")
