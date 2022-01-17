@@ -8,21 +8,21 @@ fs.readdirSync('./commands').forEach(dir => {
         var data = fs.readFileSync(`./commands/${dir}/${file}`, "utf-8");
 
 
-   if (!data.includes("const embed") &&!data.includes("let embed") &&!data.includes("var embed") && data.includes("MessageEmbed()")) {
+
+        if (!data.includes("const embed") &&!data.includes("let embed") &&!data.includes("var embed") && data.includes("MessageEmbed()")) {
             console.log("Embed Problem!   ", dir + "/" + file)
         }
 
-
         if (data.includes(".createReactionCollector")) {
-            console.log("createReactionCollector   ", dir + "/" + file)
+            console.log("(Can be not error, only check) createReactionCollector   ", dir + "/" + file)
         }
 
         if (data.includes(".awaitReactions")) {
-            console.log("createReactionCollector   ", dir + "/" + file)
+            console.log("(Can be not error, only check) awaitReactions  ", dir + "/" + file)
         }
 
         if (data.includes(".awaitMessages")) {
-            console.log(".awaitMessages   ", dir + "/" + file)
+            console.log("(Can be not error, only check) .awaitMessages   ", dir + "/" + file)
         }
 
         //WARN FOR ADDFIELDS!
@@ -33,7 +33,7 @@ fs.readdirSync('./commands').forEach(dir => {
 
         //CAN FETCH BOT INVITE LINK 
         if (data.includes("permissions")) {
-            console.log("Permisson  ", dir + "/" + file)
+            console.log("(Can bots invite link) Permisson  ", dir + "/" + file)
         }
 
         if (data.includes("unknown")) {
@@ -56,26 +56,26 @@ fs.readdirSync('./commands').forEach(dir => {
             console.log("guild.voice   ", dir + "/" + file)
         }
         if (data.includes(".ban")) {
-            console.log("ban   ", dir + "/" + file)
+            console.log("(Can be not error, only check) ban  ", dir + "/" + file)
         }
         if (data.includes(".kick")) {
-            console.log("kick   ", dir + "/" + file)
+            console.log("(Can be not error, only check) kick   ", dir + "/" + file)
         }
 
 
 
 
         if (data.includes(".delete")) {
-            console.log("Check delete() .   ", dir + "/" + file)
+            console.log("(Can be not error, only check) delete() .   ", dir + "/" + file)
         }
         if (data.includes("roles.create")) {
             console.log("roles.create   ", dir + "/" + file)
         }
         if (data.includes("WebhookClient")) {
-            console.log("WebhookClient  ", dir + "/" + file)
+            console.log("(Can be not error, only check) WebhookClient  ", dir + "/" + file)
         }
         if (data.includes("Typing")) {
-            console.log("Typing  ", dir + "/" + file)
+            console.log("(Can be not error, only check) Typing  ", dir + "/" + file)
         }
 
 
