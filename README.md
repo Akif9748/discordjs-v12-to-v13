@@ -12,6 +12,10 @@ message => messageCreate
 
 # Manuel Changes (the app will let you know where it is) :
 
+```js
+Collection.array()
+Collection.map(a=>a)
+```
 
 
 ```js
